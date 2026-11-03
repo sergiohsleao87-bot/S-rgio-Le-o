@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuidados Mainha - controle diário</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --card: #ffffff; --text: #1d2330; --muted: #6b7280;
+    --line: #e5e7eb; --ok: #15803d; --late: #b91c1c; --soon: #b45309; --accent: #2563eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111418; --card: #1a1f27; --text: #e6e8ec; --muted: #9aa3b2;
+      --line: #2a313c; --ok: #4ade80; --late: #f87171; --soon: #fbbf24; --accent: #60a5fa;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111418; --card: #1a1f27; --text: #e6e8ec; --muted: #9aa3b2;
+    --line: #2a313c; --ok: #4ade80; --late: #f87171; --soon: #fbbf24; --accent: #60a5fa;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: var(--bg); color: var(--text); }
+  main { max-width: 720px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.35rem; margin: 8px 0 4px; }
+  .sub { color: var(--muted); font-size: .9rem; margin-bottom: 14px; }
+  .bar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+  .bar input[type=date] { padding: 8px; border: 1px solid var(--line); border-radius: 8px;
+                          background: var(--card); color: var(--text); font: inherit; }
+  button { font: inherit; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--line);
+           background: var(--card); color: var(--text); cursor: pointer; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .stats { display: flex; gap: 8px; margin: 10px 0 16px; flex-wrap: wrap; }
+  .stat { flex: 1; min-width: 110px; background: var(--card); border: 1px solid var(--line);
+          border-radius: 10px; padding: 10px; text-align: center; }
+  .stat b { display: block; font-size: 1.4rem; }
+  .stat span { color: var(--muted); font-size: .8rem; }
+  .group { margin-bottom: 18px; }
+  .group h2 { font-size: .95rem; color: var(--muted); margin: 0 0 6px; text-transform: uppercase; letter-spacing: .04em; }
+  .task { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+          padding: 12px; margin-bottom: 8px; display: grid; grid-template-columns: auto 1fr; gap: 10px; }
+  .task.done { opacity: .7; }
+  .task input[type=checkbox] { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--ok); }
+  .title { font-weight: 600; }
+  .meta { color: var(--muted); font-size: .85rem; margin-top: 2px; }
+  .badge { display: inline-block; font-size: .75rem; padding: 2px 8px; border-radius: 999px;
+           border: 1px solid currentColor; margin-left: 6px; }
+  .late { color: var(--late); } .soon { color: var(--soon); } .ok { color: var(--ok); }
+  .row2 { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+  .row2 select, .row2 input { padding: 6px 8px; border: 1px solid var(--line); border-radius: 8px;
+                              background: var(--bg); color: var(--text); font: inherit; }
+  .row2 input { flex: 1; min-width: 160px; }
+  .note { color: var(--muted); font-size: .8rem; margin-top: 18px; }
+  textarea { width: 100%; height: 120px; margin-top: 10px; font: 12px monospace; padding: 8px;
+             border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--text); }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Cuidados Mainha - controle diário</h1>
+  <div class="sub">Tarefas de medicação e ligações, conforme a planilha "Cuidados Mainha - controle diário".</div>
+
+  <div class="bar">
+    <input type="date" id="day" aria-label="Dia">
+    <button id="today">Hoje</button>
+    <button id="exportBtn">Exportar CSV</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><b id="sDone">0</b><span>Feitas</span></div>
+    <div class="stat"><b id="sPending">0</b><span>Pendentes</span></div>
+    <div class="stat"><b id="sLate" class="late">0</b><span>Atrasadas</span></div>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="bar">
+    <button id="showImport">Importar CSV</button>
+  </div>
+  <textarea id="csv" class="hidden" placeholder="Cole aqui o CSV exportado para carregar os registros."></textarea>
+  <div class="bar hidden" id="importBar"><button class="primary" id="doImport">Carregar</button></div>
+
+  <p class="note">
+    Os registros são salvos neste navegador. Para compartilhar com as duas irmãs,
+    use "Exportar CSV" e cole as linhas na planilha, ou use "Importar CSV" para carregar um arquivo colado.
+  </p>
+</main>
+
+<script>
+(function () {
+  // Esquema diário, extraído das linhas da planilha (02/11 a 08/11/2026).
+  const TEMPLATE = [
+    { h: "09:00", tipo: "Remédio",  o: "Reconter, 1 comprimido",               quem: "Irmã A" },
+    { h: "09:00", tipo: "Remédio",  o: "Cetrolac, 1 gota olho esquerdo",       quem: "Irmã A" },
+    { h: "09:00", tipo: "Ligação",  o: "Ligar para a Mamãe (conversa do dia)", quem: "Irmã A" },
+    { h: "14:00", tipo: "Remédio",  o: "Cetrolac, 1 gota olho esquerdo",       quem: "Irmã B" },
+    { h: "18:00", tipo: "Ligação",  o: "Ligar para a Mamãe (fim da tarde)",    quem: "Irmã B" },
+    { h: "21:00", tipo: "Remédio",  o: "Quetiapina, 1 comprimido",             quem: "Irmã B" },
+    { h: "21:00", tipo: "Remédio",  o: "Cetrolac, 1 gota olho esquerdo",       quem: "Irmã B" }
+  ];
+  const DAYS = ["2026-11-02","2026-11-03","2026-11-04","2026-11-05","2026-11-06","2026-11-07","2026-11-08"];
+  const KEY = "cuidados-mainha-v1";
+  const $ = (id) => document.getElementById(id);
+
+  // Armazenamento: tudo com try/catch, a página funciona sem ele.
+  let store = {};
+  try { store = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { store = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(store)); } catch (e) {} }
+
+  function iso(d) { return d.toISOString().slice(0, 10); }
+  function fmtBr(s) { const [y, m, d] = s.split("-"); return d + "/" + m + "/" + y; }
+  function taskId(day, i) { return day + "#" + i; }
+  function rec(day, i) { return store[taskId(day, i)] || { feito: false, quem: "", obs: "" }; }
+
+  function nowMinutes(day) {
+    const now = new Date();
+    if (iso(now) !== day) return null;
+    return now.getHours() * 60 + now.getMinutes();
+  }
+
+  function render() {
+    const day = $("day").value;
+    const list = $("list");
+    list.innerHTML = "";
+    let done = 0, pending = 0, late = 0;
+    const cur = nowMinutes(day);
+    const groups = {};
+    TEMPLATE.forEach((t, i) => { (groups[t.h] = groups[t.h] || []).push([t, i]); });
+
+    Object.keys(groups).sort().forEach((h) => {
+      const g = document.createElement("div");
+      g.className = "group";
+      const title = document.createElement("h2");
+      title.textContent = h;
+      g.appendChild(title);
+      groups[h].forEach(([t, i]) => {
+        const r = rec(day, i);
+        const [hh, mm] = t.h.split(":").map(Number);
+        const slot = hh * 60 + mm;
+        let status = "";
+        if (r.feito) { done++; status = '<span class="badge ok">feito</span>'; }
+        else {
+          pending++;
+          if (cur !== null && cur > slot + 60) { late++; status = '<span class="badge late">atrasado</span>'; }
+          else if (cur !== null && cur >= slot - 30) { status = '<span class="badge soon">agora</span>'; }
+        }
+
+        const card = document.createElement("div");
+        card.className = "task" + (r.feito ? " done" : "");
+        card.innerHTML =
+          '<input type="checkbox" ' + (r.feito ? "checked" : "") + ' aria-label="Feito">' +
+          '<div>' +
+            '<div class="title">' + t.o + status + '</div>' +
+            '<div class="meta">' + t.tipo + ' · ' + t.h + '</div>' +
+            '<div class="row2">' +
+              '<select aria-label="Quem confirmou">' +
+                '<option value="">Quem confirmou?</option>' +
+                '<option' + (r.quem === "Irmã A" ? " selected" : "") + '>Irmã A</option>' +
+                '<option' + (r.quem === "Irmã B" ? " selected" : "") + '>Irmã B</option>' +
+              '</select>' +
+              '<input type="text" placeholder="Observação" value="' + (r.obs || "").replace(/"/g, "&quot;") + '">' +
+            '</div>' +
+          '</div>';
+
+        const cb = card.querySelector("input[type=checkbox]");
+        const sel = card.querySelector("select");
+        const obs = card.querySelector("input[type=text]");
+        const id = taskId(day, i);
+        cb.addEventListener("change", () => {
+          store[id] = Object.assign(rec(day, i), { feito: cb.checked, quem: sel.value, obs: obs.value });
+          if (cb.checked && !sel.value) { sel.value = ""; }
+          save(); render();
+        });
+        sel.addEventListener("change", () => {
+          store[id] = Object.assign(rec(day, i), { quem: sel.value, obs: obs.value });
+          save();
+        });
+        obs.addEventListener("change", () => {
+          store[id] = Object.assign(rec(day, i), { obs: obs.value });
+          save();
+        });
+        g.appendChild(card);
+      });
+      list.appendChild(g);
+    });
+
+    $("sDone").textContent = done;
+    $("sPending").textContent = pending;
+    $("sLate").textContent = late;
+  }
+
+  function toCsv(days) {
+    const rows = ["Data,Horário,Tipo,O que fazer,Feito (SIM/NÃO),Quem confirmou,Observação"];
+    days.forEach((day) => {
+      TEMPLATE.forEach((t, i) => {
+        const r = rec(day, i);
+        const q = (s) => '"' + String(s || "").replace(/"/g, '""') + '"';
+        rows.push([fmtBr(day), t.h, t.tipo, q(t.o), r.feito ? "SIM" : "NÃO", q(r.quem), q(r.obs)].join(","));
+      });
+    });
+    return rows.join("\n");
+  }
+
+  function setDay(d) { $("day").value = d; render(); }
+
+  $("day").addEventListener("change", render);
+  $("today").addEventListener("click", () => setDay(iso(new Date())));
+  $("exportBtn").addEventListener("click", () => {
+    const area = $("csv");
+    area.classList.remove("hidden");
+    area.value = toCsv(DAYS);
+    area.select();
+  });
+  $("showImport").addEventListener("click", () => {
+    $("csv").classList.remove("hidden");
+    $("importBar").classList.remove("hidden");
+  });
+  $("doImport").addEventListener("click", () => {
+    const lines = $("csv").value.split(/\r?\n/).slice(1).filter(Boolean);
+    let n = 0;
+    lines.forEach((line) => {
+      const m = line.match(/^"?(\d{2})\/(\d{2})\/(\d{4})"?,(\d{2}:\d{2}),/);
+      if (!m) return;
+      const day = m[3] + "-" + m[2] + "-" + m[1];
+      const h = m[4];
+      const idx = TEMPLATE.findIndex((t, i) => t.h === h && line.indexOf(t.o) !== -1);
+      if (idx < 0) return;
+      const cols = line.match(/"([^"]*)"|[^,]+/g) || [];
+      const clean = (s) => (s || "").replace(/^"|"$/g, "").replace(/""/g, '"');
+      const feito = /SIM/i.test(cols[4] || "");
+      store[taskId(day, idx)] = { feito: feito, quem: clean(cols[5]), obs: clean(cols[6]) };
+      n++;
+    });
+    save();
+    $("csv").value = "";
+    $("csv").classList.add("hidden");
+    $("importBar").classList.add("hidden");
+    alert(n + " registros carregados.");
+    render();
+  });
+
+  setDay(iso(new Date()) >= DAYS[0] && iso(new Date()) <= DAYS[DAYS.length - 1] ? iso(new Date()) : DAYS[0]);
+  setInterval(render, 60000);
+})();
+</script>
+</body>
+</html>
