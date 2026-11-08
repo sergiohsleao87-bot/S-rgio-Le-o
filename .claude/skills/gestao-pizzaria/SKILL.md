@@ -76,7 +76,7 @@ Para revisar processos, rotinas, precificação, cardápio ou controles ("audite
 
 | Indicador | Referência | Confiança |
 |---|---|---|
-| CMV % do faturamento | 25% a 40% (cita a Abrasel, via fonte secundária) | Média: confirmar na fonte original |
+| CMV % do faturamento | 25% a 40%, por tipo de operação: fast food e autosserviço tendem à faixa baixa; à la carte, à faixa alta. Atribuído à Abrasel por fonte secundária (Central do Varejo), sem a cartilha original localizada | Baixa a média: confirmar na cartilha da Abrasel antes de citar como oficial |
 | Custo de alimentos (food cost) | Cerca de 30% do preço de venda, como regra prática | Baixa: regra prática |
 | Custo prato + mão de obra (prime cost) | 55% a 65% do faturamento; acima de 65% pede ajuste | Baixa: fonte de blog de contabilidade |
 | Mão de obra | 22% a 25% (valor comum, sem encargos em alguns casos) | Baixa: anedótica |

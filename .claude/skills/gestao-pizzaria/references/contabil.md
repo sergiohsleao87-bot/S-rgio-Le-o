@@ -111,3 +111,42 @@ Lucro não é caixa. Uma pizzaria pode dar lucro no papel e faltar dinheiro, se 
 - Confundir lucro com caixa disponível.
 - Não separar conta pessoal da conta da empresa.
 - Deixar as notas e os comprovantes para o fim do ano.
+
+## Exemplo completo: unidade econômica de uma pizza
+
+> Valores fictícios para ilustrar o método. Substitua pelos seus custos reais.
+
+**1. Custo de insumos e embalagem (pizza grande de muçarela)**
+
+| Ingrediente / item | Quantidade | Custo unitário | Custo na pizza |
+|---|---|---|---|
+| Massa | 250 g | R$ 6,00/kg | R$ 1,50 |
+| Muçarela | 150 g | R$ 40,00/kg | R$ 6,00 |
+| Molho de tomate | 60 g | R$ 8,00/kg | R$ 0,48 |
+| Orégano, azeite e outros | — | rateio | R$ 0,30 |
+| Caixa e sacola | 1 un. | R$ 1,20 | R$ 1,20 |
+| **Total** | | | **R$ 9,48** |
+
+**2. Preço e custos variáveis por canal**
+
+| Item | Balcão / telefone | Aplicativo (taxa de 23%) |
+|---|---|---|
+| Preço de venda | R$ 45,00 | R$ 45,00 |
+| Custo de insumos e embalagem | − R$ 9,48 | − R$ 9,48 |
+| Impostos sobre a venda (6%, ilustrativo) | − R$ 2,70 | − R$ 2,70 |
+| Comissão do aplicativo (23%) | — | − R$ 10,35 |
+| **Margem de contribuição** | **R$ 32,82 (72,9%)** | **R$ 22,47 (49,9%)** |
+
+Leitura: a mesma pizza rende 23 pontos percentuais a menos quando vendida pelo aplicativo, com a comissão como principal diferença. Isso não significa abandonar o canal; significa que o aplicativo precisa ser contabilizado como canal próprio, com meta de volume e de lucro.
+
+**3. Ponto de equilíbrio em quantidade de pizzas**
+
+- Custos fixos mensais: R$ 30.000 (aluguel R$ 8.000, salários fixos R$ 15.000, outros R$ 7.000).
+- Margem de contribuição média por pizza (mix de canais): R$ 25,00.
+- Ponto de equilíbrio = R$ 30.000 ÷ R$ 25,00 = **1.200 pizzas por mês** (cerca de 40 por dia).
+
+Se o mix migrar para mais aplicativo, a margem média cai e o ponto de equilíbrio sobe. É por isso que o cálculo precisa ser refeito a cada mudança de canal.
+
+**4. Mão de obra direta**
+
+Mão de obra não entra no custo do insumo. Ela entra como custo fixo ou semi-fixo, rateado pelo volume. Se a equipe é fixa, aumentar o volume diminui o custo por pizza; se é por hora, o custo acompanha a demanda.

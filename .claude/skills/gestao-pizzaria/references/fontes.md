@@ -11,11 +11,11 @@ Use o grau de confiança para decidir quanto peso dar a cada fonte:
 
 | Título | Autor / editora | Tema | Confiança |
 |---|---|---|---|
-| Gestão da Gastronomia: custos, formação de preços, gerenciamento e planejamento do lucro (7ª ed., 2025) | Senac São Paulo | Custos e precificação em gastronomia, em português | Alta |
-| Gestão da Restauração (2020) | Vítor Gomes, Lidel | Orçamentação e gestão de restaurantes. Edição portuguesa: a terminologia pode diferir da brasileira | Alta |
-| How to Open a Financially Successful Pizza and Sub Restaurant | Douglas R. Brown | Viabilidade financeira de pizzaria e sub shop. Edição de 2006: pode estar desatualizada | Média |
-| How to START: a Pizzeria | Sarfaraz Karmali | Guia de abertura e operação de pizzaria | Baixa a média |
-| Restaurant Success By the Numbers | Roger Fields | Lucratividade de restaurante por indicadores | Média (citado em listas, não verificado diretamente) |
+| Gestão da Gastronomia: custos, formação de preços, gerenciamento e planejamento do lucro (7ª ed., 2025). ISBN 9788539657575, 256 págs., lançamento 13/10/2025, preço de capa citado de R$ 104,00 | Roberto Magno Meira Braga, Senac São Paulo | Formação de custos e preços em restaurantes, em português, com seis capítulos e tabelas | Alta (ficha confirmada na página da editora via busca) |
+| Gestão da Restauração (fev. 2020). ISBN 9789897524219, 272 págs. | Vítor Gomes, Lidel (Lisboa) | Gestão de restaurantes e hotelaria, incluindo orçamentação. Publicação portuguesa: a terminologia pode diferir da brasileira | Alta (ISBN e editora confirmados em ficha de livraria e referência acadêmica) |
+| How to Open a Financially Successful Pizza and Sub Restaurant | Douglas R. Brown | Viabilidade financeira de pizzaria e sub shop. Edição de 2006: pode estar desatualizada | Média (título confirmado por livrarias; conteúdo não lido) |
+| How to START: a Pizzeria | Sarfaraz Karmali | Guia de abertura e operação de pizzaria | Baixa a média (título confirmado; conteúdo não lido) |
+| Restaurant Success by the Numbers (1ª ed. 2007; 2ª ed. 2014, "A Money-Guy's Guide to Opening the Next New Hot Spot") | Roger Fields, ex-CPA e dono de dois restaurantes em Nova York | Lucratividade de restaurante por indicadores financeiros. 1ª ed. Random House; 2ª ed. Ten Speed Press | Média (autor, editoras e datas confirmados em livrarias; conteúdo não lido) |
 | Hospitality Cost Control | Citado em listas de gestão hoteleira e de alimentos | Fórmulas de controle de custo | Média (citado em listas) |
 | The Restaurant Manager's Handbook | Citado em listas de gestão de restaurantes | Cardápio, cozinha, segurança alimentar e custos | Média (citado em listas) |
 
@@ -25,7 +25,7 @@ Observação: a busca não confirmou títulos de Michael Ruhlman (*Restaurant Un
 
 | Case | Fonte | Tema | Confiança |
 |---|---|---|---|
-| Pizza Guys (80+ unidades) | [Shipday](https://shipday.com/case-studies/pizza-guys-improving-multi-location-delivery-operations-with-shipday) | Pontualidade de entregas com rastreamento e comprovante de entrega; relato de melhora de cerca de 90-92% para mais de 98% em unidades iniciais | Baixa (vendor) |
+| Pizza Guys (80+ unidades; a própria página cita 25 lojas com o Shipday) | [Shipday](https://shipday.com/case-studies/pizza-guys-improving-multi-location-delivery-operations-with-shipday) | Pontualidade de entregas com rastreamento e comprovante de entrega. O número de 90-92% para mais de 98% **não foi confirmado**: aparece igual no case do Steak Out e a contagem de unidades diverge entre páginas | Baixa (vendor; não citar como fato) |
 | Pizzeria Delights | [Shipday](https://shipday.com/case-studies/transforming-delivery-operations-at-pizzeria-delights) | Transformação da operação de entrega | Baixa (vendor) |
 | Piu Bello | [HungerRush](https://www.casestudies.com/company/hungerRush/case-study/piu-bello-customer-case-study) | Limite de pedidos e distância por entregador, após relatórios de rotas longas | Baixa (vendor) |
 | Papa Gino's Pizzeria (quase 100 restaurantes) | [VROMO](https://www.casestudies.com/company/vromo/case-study/papa-ginos-pizzeria-customer-case-study) | Automação de despacho e empilhamento de pedidos, com equilíbrio entre entregador próprio e terceiros | Baixa (vendor) |
@@ -38,7 +38,7 @@ Observação: a busca não confirmou títulos de Michael Ruhlman (*Restaurant Un
 
 | Evento / palestrante | Fonte | Tema | Confiança |
 |---|---|---|---|
-| Pizza Expo (Las Vegas, 13 a 15 de abril de 2027) | [Pizza Expo](https://pizzaexpo.pizzatoday.com/) | Evento do setor de pizzarias; reúne seminários de gestão, finanças e operação | Alta (evento oficial) |
+| Pizza Expo (Las Vegas, 13 a 15 de abril de 2027) | [Pizza Expo](https://pizzaexpo.pizzatoday.com/) | Exposição em 13 a 15 de abril de 2027 (Las Vegas Convention Center). A educação (seminários e workshops, incluindo a School of Pizzeria Management) vai de 11 a 15 de abril. Programação de 2027 não confirmada | Alta (datas confirmadas por busca; site oficial não acessível neste ambiente) |
 | Nick Bogacz (Caliente Pizza & Draft House) | [Pizza Expo](https://pizzaexpo.pizzatoday.com/speakers/nick-bogacz/) | Custos de alimentos e de mão de obra; treinamento e contratação | Média |
 | Dan Collier (PizzaMan Dan's, 9 unidades na Califórnia) | [Pizza Expo](https://pizzaexpo.pizzatoday.com/speakers/dan-collier/) | Comprar ou alugar o imóvel da pizzaria | Média |
 | Jeremy Galvin (Master Pizza) | [Pizza Expo](https://pizzaexpo.pizzatoday.com/speakers/jeremy-galvin/) | Trabalho em equipe | Média |
@@ -46,7 +46,7 @@ Observação: a busca não confirmou títulos de Michael Ruhlman (*Restaurant Un
 | Podcast The Hot Slice: "Secrets to Midwest Pizzeria Profitability" | [Pizza Today](https://pizzatoday.com/?p=617457) | Lucratividade de pizzarias | Média |
 | 2025 Pizza Expo Speakers Roundtable: Top Business Concerns | [Pizza Today](https://pizzatoday.com/?p=148780) | Principais preocupações de negócio de donos de pizzaria | Média |
 
-Observação: a programação do Pizza Expo 2027 deve ser conferida no site oficial. Não encontrei palestras equivalentes em português nesta pesquisa.
+Observação: a programação do Pizza Expo 2027 deve ser conferida no site oficial. Não encontrei palestras equivalentes em português nesta pesquisa. Os nomes dos palestrantes vieram de páginas de programação de edições futuras e podem mudar.
 
 ## Conteúdo em português (Brasil)
 
@@ -62,7 +62,7 @@ Observação: a programação do Pizza Expo 2027 deve ser conferida no site ofic
 | [Omie: precificação em restaurantes](https://www.omie.com.br/blog/precificacao-em-restaurantes-como-lucrar-mais/) | Precificação | Média (vendor) |
 | [Central do Varejo: gestão de restaurantes](https://centraldovarejo.com.br/?p=45839) | Rotina de contagem de estoque e CMV | Baixa a média |
 
-Referências de percentuais (CMV 25% a 40%, citadas como Abrasel; prime cost 55% a 65%; food cost de cerca de 30%) vêm de fontes secundárias. Confirme na fonte original antes de usar como meta.
+Referências de percentuais (CMV 25% a 40%, citadas como Abrasel; prime cost 55% a 65%; food cost de cerca de 30%) vêm de fontes secundárias. A faixa de CMV aparece em um único veículo (Central do Varejo), que atribui a informação a uma cartilha da Abrasel não localizada; por isso tem confiança baixa a média. Também não encontrei fonte independente para prime cost e food cost. Confirme na fonte original antes de usar como meta.
 
 ## Projetos no GitHub
 
@@ -83,3 +83,24 @@ O que foi incorporado desses projetos: o modo auditor com severidade e evidênci
 - Muitos cases vêm de fornecedores de software. Os resultados são auto-declarados e não foram verificados de forma independente.
 - Parte dos dados de Domino's e Papa John's tem mais de três anos.
 - Não encontrei conteúdo específico de pizzaria em português com nível acadêmico além dos TCCs e artigos listados.
+
+## Validação realizada
+
+Verificação feita em 8 de novembro de 2026. O ambiente de pesquisa não consegue abrir a maioria dos sites das fontes (domínio sem resolução de DNS), então a checagem foi feita pelos resultados de busca, quando estes traziam os dados.
+
+**Confirmado pela busca**
+- Pizza Expo: exposição em 13 a 15 de abril de 2027, com educação de 11 a 15 de abril.
+- Senac SP, *Gestão da Gastronomia* (7ª ed.): autor Roberto Magno Meira Braga, ISBN 9788539657575, lançamento 13/10/2025.
+- Vítor Gomes, *Gestão da Restauração*: Lidel, fevereiro de 2020, ISBN 9789897524219.
+- Roger Fields, *Restaurant Success by the Numbers*: 1ª ed. em 2007 (Random House) e 2ª ed. em 2014 (Ten Speed Press).
+- Repositórios GitHub: os arquivos `pizzaria-reviewer/SKILL.md` e `pizzaiolo/SKILL.md` existem na branch `main` dos clones locais. O README do PizzaQL confirma as funções citadas.
+
+**Não confirmado (corrigido ou rebaixado)**
+- Pizza Guys, "90-92% para mais de 98%": só aparece em material do fornecedor, de forma idêntica a outro case. Não usar como fato.
+- CMV de 25% a 40% atribuído à Abrasel: uma fonte secundária, sem a cartilha original.
+- Prime cost (55% a 65%) e food cost (cerca de 30%): sem fonte independente.
+- Conteúdo dos livros de Karmali, Brown, Fields e Vítor Gomes: não lido; só a ficha bibliográfica.
+- Palestrantes do Pizza Expo 2027: listados em páginas de programação, sem horário confirmado.
+
+**Não acessível neste ambiente**
+Domínios que não resolveram: `pizzaexpo.pizzatoday.com`, `pizzatoday.com`, `www.sp.senac.br`, `shipday.com`, `saipos.com`, `casestudies.com`, `ufpb.br`, `repositorio.ufms.br`, `omie.com.br`, `centraldovarejo.com.br`, `qsrmagazine.com`, `restaurantdive.com`. Os links continuam no documento, mas não foram abertos diretamente.

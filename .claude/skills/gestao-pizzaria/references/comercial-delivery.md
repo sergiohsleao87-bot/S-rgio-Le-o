@@ -84,3 +84,23 @@ Acompanhe o **lucro por canal**, descontando comissão, taxa de pagamento, entre
 - Não ter zona de entrega definida, o que aumenta custo e atraso.
 - Não medir o tempo de cozinha separadamente do tempo de entrega.
 - Aumentar o cardápio sem revisar estoque, custo e tempo de preparo.
+
+## Exemplo completo: custo de entrega própria por pedido
+
+> Valores fictícios para ilustrar o método.
+
+| Item | Valor por entrega |
+|---|---|
+| Pagamento ao entregador (corrida) | R$ 8,00 |
+| Combustível e manutenção (rateio por km) | R$ 2,00 |
+| Embalagem térmica e material de entrega | R$ 0,50 |
+| **Custo de entrega** | **R$ 10,50** |
+| Taxa de entrega cobrada do cliente | R$ 6,00 |
+| **Subsídio por entrega** | **R$ 4,50** |
+
+Cálculo de equilíbrio: se a taxa cobrada é R$ 6,00 e o custo é R$ 10,50, cada entrega exige um ticket mínimo que compense o subsídio. Com margem de contribuição de R$ 22,00 por pizza, a entrega ainda compensa, mas ela reduz a margem do pedido de R$ 22,00 para R$ 17,50.
+
+Regras práticas:
+- Defina um pedido mínimo para delivery, de modo que o subsídio não seja maior que uma parte definida da margem do pedido.
+- Agrupe pedidos na mesma rota. Duas entregas no mesmo trajeto reduzem o custo por pedido sem aumentar o pagamento ao entregador.
+- Compare com a alternativa: entregador por diária (custo fixo) ou serviço terceirizado (custo variável). O melhor modelo depende do volume diário e de sua regularidade.
