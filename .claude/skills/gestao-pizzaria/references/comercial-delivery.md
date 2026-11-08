@@ -18,6 +18,7 @@ Classifique cada item pela **popularidade** (quantas vendas) e pela **margem** (
 ## Precificação
 
 **Método de custo + margem:**
+
 1. Calcule o custo da pizza pela ficha técnica (ingredientes com peso e custo unitário, mais embalagem).
 2. Defina o markup ou a margem alvo considerando custos fixos, impostos, taxa de plataforma e lucro desejado.
 3. Verifique o preço com a concorrência, mas não copie. Preço de concorrente sem o seu custo é chute.
@@ -101,6 +102,7 @@ Acompanhe o **lucro por canal**, descontando comissão, taxa de pagamento, entre
 Cálculo de equilíbrio: se a taxa cobrada é R$ 6,00 e o custo é R$ 10,50, cada entrega exige um ticket mínimo que compense o subsídio. Com margem de contribuição de R$ 22,00 por pizza, a entrega ainda compensa, mas ela reduz a margem do pedido de R$ 22,00 para R$ 17,50.
 
 Regras práticas:
+
 - Defina um pedido mínimo para delivery, de modo que o subsídio não seja maior que uma parte definida da margem do pedido.
 - Agrupe pedidos na mesma rota. Duas entregas no mesmo trajeto reduzem o custo por pedido sem aumentar o pagamento ao entregador.
 - Compare com a alternativa: entregador por diária (custo fixo) ou serviço terceirizado (custo variável). O melhor modelo depende do volume diário e de sua regularidade.

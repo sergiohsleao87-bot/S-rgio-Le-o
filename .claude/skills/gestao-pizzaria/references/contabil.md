@@ -17,6 +17,7 @@ A ficha técnica é a base de todo cálculo de custo. Para cada pizza, registre:
 | *Total* | | | | *R$ __* |
 
 Regras:
+
 - Use peso, não medida caseira, para ingredientes que variam (queijo, carne, cobertura).
 - Inclua ingredientes compostos (molho, massa), com a receita do preparo e o rendimento.
 - Inclua a embalagem e o material de entrega, que muitas vezes são esquecidos.
@@ -30,6 +31,7 @@ Regras:
 **Percentual:** CMV % = CMV ÷ Faturamento do período
 
 Boas práticas:
+
 - Faça o cálculo mensal, com contagem de estoque no início e no fim do mês.
 - Separe as compras por categoria (proteína, laticínio, hortifrúti, embalagem, bebida), para ver onde o custo cresce.
 - Compare o CMV teórico (vendas × ficha técnica) com o CMV real (fórmula acima). A diferença é perda, desperdício, erro de porção ou furto. Investigue.
@@ -45,6 +47,7 @@ Boas práticas:
 | Variáveis (variam com o volume) | Insumos e embalagens, comissão de aplicativo, taxa de cartão, taxa de entrega paga a motoboy por corrida, impostos sobre a venda, gás e energia do forno em função do uso |
 
 Atenção:
+
 - Entregador por diária ou salário é fixo; entregador por corrida é variável. Classifique conforme o contrato.
 - Se o custo de energia ou gás cresce com o uso, trate como semivariável e rateie por volume ou por faixa.
 

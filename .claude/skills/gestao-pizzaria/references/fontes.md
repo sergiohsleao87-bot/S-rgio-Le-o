@@ -3,6 +3,7 @@
 Esta lista reúne o que foi encontrado em pesquisa na web e no GitHub. Ela não é uma lista definitiva de "melhores do mundo": não encontrei um ranking independente e confiável de livros ou palestras específicas sobre gestão de pizzaria. Boa parte do material vem de fornecedores de software, o que favorece a visão do fornecedor.
 
 Use o grau de confiança para decidir quanto peso dar a cada fonte:
+
 - **Alta**: fonte acadêmica, editora conhecida ou evento do setor com programação oficial.
 - **Média**: fonte do setor com método descrito, mas com interesse comercial.
 - **Baixa**: blog, listicle, post anedótico ou resultado auto-declarado sem verificação.
@@ -89,6 +90,7 @@ O que foi incorporado desses projetos: o modo auditor com severidade e evidênci
 Verificação feita em 8 de novembro de 2026. O ambiente de pesquisa não consegue abrir a maioria dos sites das fontes (domínio sem resolução de DNS), então a checagem foi feita pelos resultados de busca, quando estes traziam os dados.
 
 **Confirmado pela busca**
+
 - Pizza Expo: exposição em 13 a 15 de abril de 2027, com educação de 11 a 15 de abril.
 - Senac SP, *Gestão da Gastronomia* (7ª ed.): autor Roberto Magno Meira Braga, ISBN 9788539657575, lançamento 13/10/2025.
 - Vítor Gomes, *Gestão da Restauração*: Lidel, fevereiro de 2020, ISBN 9789897524219.
@@ -96,6 +98,7 @@ Verificação feita em 8 de novembro de 2026. O ambiente de pesquisa não conseg
 - Repositórios GitHub: os arquivos `pizzaria-reviewer/SKILL.md` e `pizzaiolo/SKILL.md` existem na branch `main` dos clones locais. O README do PizzaQL confirma as funções citadas.
 
 **Não confirmado (corrigido ou rebaixado)**
+
 - Pizza Guys, "90-92% para mais de 98%": só aparece em material do fornecedor, de forma idêntica a outro case. Não usar como fato.
 - CMV de 25% a 40% atribuído à Abrasel: uma fonte secundária, sem a cartilha original.
 - Prime cost (55% a 65%) e food cost (cerca de 30%): sem fonte independente.

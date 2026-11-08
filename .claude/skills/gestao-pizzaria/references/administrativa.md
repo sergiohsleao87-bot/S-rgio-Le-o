@@ -12,6 +12,7 @@ Escopo: rotina diária, equipe, compras, estoque, padrões de operação, qualid
 ## Rotina diária (checklist de abertura e fechamento)
 
 **Abertura**
+
 - [ ] Temperatura do forno e das câmaras de refrigeração registrada
 - [ ] Contagem rápida dos itens de maior custo (queijo, carnes, embalagens)
 - [ ] Massa e molhos preparados conforme previsão de vendas do dia
@@ -19,6 +20,7 @@ Escopo: rotina diária, equipe, compras, estoque, padrões de operação, qualid
 - [ ] Escala de equipe confirmada
 
 **Fechamento**
+
 - [ ] Lançamento de vendas e formas de pagamento do dia
 - [ ] Registro de perdas (massa estragada, pizza refeita, queimada, sobra)
 - [ ] Conferência de caixa e de pedidos de delivery não lançados
